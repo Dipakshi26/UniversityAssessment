@@ -1,0 +1,52 @@
+﻿@model IEnumerable<UniversityMvc.Models.UniversityViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<partial name="_PartialViewForCreate"></partial>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UniversityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AffiliatedUnder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstablishedYear)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UniversityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AffiliatedUnder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstablishedYear)
+            </td>
+            <td>
+                <a asp-action="UpdateUniversity1" asp-route-id="@item.UniversityId">UpdateUniversityDetails</a> |
+                <a asp-action="Details" asp-route-id="@item.UniversityId">Details</a> |
+               <a asp-action="DeleteUniversityDeatils" asp-route-id="@item.UniversityId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
