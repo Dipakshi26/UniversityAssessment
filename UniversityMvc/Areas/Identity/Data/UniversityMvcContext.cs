@@ -21,5 +21,5 @@ public class UniversityMvcContext : IdentityDbContext<UniversityMvcUser>
         // Add your customizations after calling base.OnModelCreating(builder);
     }
 
-    public DbSet<UniversityMvc.Models.UniversityViewModel>? UniversityViewModel { get; set; }
+    public DbSet<UniversityClassLibrary.Entities.UniversityDetails>? universityDetails { get; set; }
 }

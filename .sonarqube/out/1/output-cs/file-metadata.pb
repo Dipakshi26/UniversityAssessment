@@ -1,0 +1,10 @@
+s
+jC:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\Controllers\UniversityDetailsController.csutf-8q
+hC:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\Controllers\WeatherForecastController.csutf-8h
+_C:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\Models\UniversityInformation.csutf-8S
+JC:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\Program.csutf-8[
+RC:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\WeatherForecast.csutf-8{
+pC:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\obj\Debug\net6.0\UniversityApi.GlobalUsings.g.csutf-8ä
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8y
+nC:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\obj\Debug\net6.0\UniversityApi.AssemblyInfo.csutf-8ç
+ÅC:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\obj\Debug\net6.0\UniversityApi.MvcApplicationPartsAssemblyInfo.csutf-8

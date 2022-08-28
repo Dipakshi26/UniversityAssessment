@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using UniversityClassLibrary.Entities;
 using UniversityMvc.Models;
 
 namespace UniversityMvc.Controllers
@@ -10,14 +13,18 @@ namespace UniversityMvc.Controllers
         Uri baseAddress = new Uri("https://localhost:7272/api");
 
         HttpClient client;
-        public UniversityController(IWebHostEnvironment webHostEnvironment)
+        private readonly IMapper _mapper;
+        public UniversityController(IWebHostEnvironment webHostEnvironment,IMapper mapper)
         {
             client = new HttpClient();
             _webHostEnvironment = webHostEnvironment;
             client.BaseAddress = baseAddress;
-        }
-        public static List<UniversityViewModel> university = new List<UniversityViewModel>();
+            _mapper = mapper;
 
+        }
+        //public static List<UniversityViewModel> university = new List<UniversityViewModel>();
+
+        [Authorize(Policy= "readonly")]
         public IActionResult Index()
         {
             
@@ -25,9 +32,15 @@ namespace UniversityMvc.Controllers
             if (response.IsSuccessStatusCode)
             {
                 string data = response.Content.ReadAsStringAsync().Result;
-                university = JsonConvert.DeserializeObject<List<UniversityViewModel>>(data);
+                var uni = JsonConvert.DeserializeObject<List<UniversityDetails>>(data);
+                var uniList = _mapper.Map<List<UniversityViewModel>>(uni);
+
+                return View("Index", uniList);
             }
-            return View("Index",university);
+            else
+            {
+                return View();
+            }
 
         }
         public IActionResult AddNewUniversity()
@@ -43,7 +56,7 @@ namespace UniversityMvc.Controllers
                 HttpRequestMessage request = new HttpRequestMessage();
                 var data = JsonConvert.SerializeObject(university);
                 var contentData = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
-                HttpResponseMessage response = client.PostAsync(baseAddress + "/UniversityDetails/PostUniversityDetails", contentData).Result;
+                HttpResponseMessage respnse = client.PostAsync(baseAddress + "/UniversityDetails/PostUniversityDetails", contentData).Result;
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -56,6 +69,7 @@ namespace UniversityMvc.Controllers
         {
 
             //HTTP DELETE
+            List<UniversityViewModel> university = new List<UniversityViewModel>();
             var deleteTask = client.DeleteAsync(baseAddress + "/UniversityDetails/DeleteUniversityDetails/" + id);
             deleteTask.Wait();
 
@@ -103,7 +117,7 @@ namespace UniversityMvc.Controllers
 
             HttpResponseMessage response = client.GetAsync(baseAddress + "/UniversityDetails/UniversityDetailsExists/id?id=" + id).Result;
             string data = response.Content.ReadAsStringAsync().Result;
-            UniversityViewModel university = JsonConvert.DeserializeObject<UniversityViewModel>(data);
+            UniversityViewModel university = JsonConvert.DeserializeObject<UniversityViewModel>(data)!;
             return View("Details",university);
 
 

@@ -1,0 +1,12 @@
+﻿C:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\Controllers\UniversityDetailsController.cs
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\Controllers\WeatherForecastController.cs
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\Models\UniversityInformation.cs
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\Program.cs
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\WeatherForecast.cs
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\obj\Debug\net6.0\UniversityApi.GlobalUsings.g.cs
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\obj\Debug\net6.0\UniversityApi.AssemblyInfo.cs
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\obj\Debug\net6.0\UniversityApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\appsettings.Development.json
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\appsettings.json
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityApi\Properties\launchSettings.json

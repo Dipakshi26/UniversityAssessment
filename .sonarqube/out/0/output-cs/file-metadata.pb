@@ -1,0 +1,10 @@
+[
+RC:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\Class1.csutf-8o
+fC:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\Entities\UniversityDetails.csutf-8v
+mC:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\Migrations\20220825154917_initial.csutf-8Å
+vC:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\Migrations\20220825154917_initial.Designer.csutf-8Ç
+wC:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\Migrations\UniversityDbContextModelSnapshot.csutf-8h
+_C:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\UniversityDbContext.csutf-8é
+ÇC:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\obj\Debug\net6.0\UniversityClassLibrary.GlobalUsings.g.csutf-8î
+àC:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8å
+ÄC:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\obj\Debug\net6.0\UniversityClassLibrary.AssemblyInfo.csutf-8

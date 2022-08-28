@@ -1,0 +1,6 @@
+﻿C:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\Class1.cs
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\Entities\UniversityDetails.cs
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\Migrations\20220825154917_initial.cs
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\Migrations\20220825154917_initial.Designer.cs
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\Migrations\UniversityDbContextModelSnapshot.cs
+C:\Users\dell\source\repos\UniversityClassLibrary\UniversityClassLibrary\UniversityDbContext.cs

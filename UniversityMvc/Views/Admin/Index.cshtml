@@ -1,0 +1,84 @@
+﻿@model IEnumerable<UniversityMvc.Models.Admin>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PanNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusIsApprove)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoleName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PanNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusIsApprove)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoleName)
+            </td>
+            <td>
+                     <a href="@Url.Action("Approve", new{item.Id, item.PanNo,item.Email,item.RoleName,item.StatusIsApprove})" onclick="ChangeUserStatus(@item.Id,true)" class="btn btn-success">Approve</a>
+                     <a href="@Url.Action("Reject", new{item.Id, item.PanNo,item.Email,item.RoleName,item.StatusIsApprove})" onclick="ChangeUserStatus(@item.Id,false)" class="btn btn-danger">Reject</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<script type="text/javascript">
+    function ChangeUserStatus(id, isApproved) {
+        debugger;
+        var dataObj = {
+            id: id,
+            isApproved: isApproved,
+            email: '',
+            panNo: '',
+            status: 'Pending',
+        };
+        if (confirm(" Hey Admin Are you sure want to continue?")) {
+            $.ajax({
+                method: "GET",
+                url: "" + id + "&isApprove=" + isApproved,
+                //data: dataObj,
+                success: function(response) {
+                    location.reload()
+                    console.log(response)
+                },
+                failure: function(response) {
+                    // alert(response.responseText);
+                },
+                error: function(response) {
+                    // alert(response.responseText);
+                    location.reload()
+                }
+            });
+        }
+
+    }
+</script>
